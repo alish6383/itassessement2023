@@ -1,0 +1,404 @@
+@import url('https://fonts.googleapis.com/css2?family=Acme&family=Roboto:ital,wght@0,300;1,300&family=Rubik+Dirt&display=swap');
+
+:root{
+  --orange:#ffa500;
+  --gold:#FFD700;
+  --grey:#808080;
+  --black:#000000;
+
+
+}
+
+*{
+  font-family: 'Acme', sans-serif;
+  margin:0; padding:0;
+  box-sizing: border-box;
+  text-transform: capitalize;
+  outline: none; border:none;
+  text-decoration: none;
+  transition: all .2s linear;
+}
+
+*::selection{
+  background:var(--grey);
+  color:#fff;
+}
+
+html{
+  font-size: 70.5%;
+  overflow-x: hidden;
+  scroll-padding-top: 6rem;
+  scroll-behavior: smooth;
+}
+
+section{
+  padding:2rem 9%;
+}
+
+
+.heading{
+  text-align: center;
+  padding:8rem 0
+}
+
+.heading span{
+  font-size: 3.5rem;
+  
+  color:var(--black);
+  border-radius: .5rem;
+  padding:.2rem 1rem;
+}
+
+.btn{
+  display: inline-block;
+  margin-top: 1rem;
+  background:var(--grey);
+  color:#fff;
+  padding:.8rem 3rem;
+  border:.2rem solid var(--grey);
+  cursor: pointer;
+  font-size: 1.7rem;
+}
+
+.btn:hover{
+  background:rgb(204, 204, 204);
+  color:var(--grey);
+}
+
+
+
+header{
+  position: fixed;
+  top:0; left: 0; right:0;
+  background:#000000;
+  z-index: 1000;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding:2rem 9%;
+}
+
+header .logo{
+  font-size: 2.5rem;
+  font-weight: bolder;
+  color:#fff;
+  text-transform: uppercase;
+}
+
+header .logo span{
+  color:var(--orange);
+}
+
+header .navbar a{
+  color:#fff;
+  font-size: 2rem;
+  margin:0 .8rem;
+}
+
+header .navbar a:hover{
+  color:var(--grey);
+}
+
+
+
+
+#menu-bar{
+  color:#fff;
+  border:.1rem solid #fff;
+  border-radius: .5rem;
+  font-size: 3rem;
+  padding:.5rem 1.2rem;
+  cursor: pointer;
+  display: none;
+}
+
+.home{
+  min-height: 100vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-flow: column;
+  position: relative;
+  z-index: 0;
+}
+
+.home .content{
+  text-align: center;}
+
+.home .content h3{
+  font-size: 6.5rem;
+  color:#ffa500;
+  text-transform: uppercase;
+  text-shadow: 0 .3rem .5rem rgba(0,0,0,.1);
+}
+
+.home .content p{
+  font-size: 2.5rem;
+  color:#FFF8DC;
+  padding:.5rem 0;
+}
+
+.home .video-container video{
+  position: absolute;
+  top:0; left: 0;
+  z-index: -1;
+  height: 100%;
+  width:100%;
+  object-fit: cover;
+}
+
+
+
+.home .controls .vid-btn{
+  height:2rem;
+  width:2rem;
+  display: inline-block;
+  border-radius: 50%;
+  background:#fff;
+  cursor: pointer;
+  margin:0 .5rem;
+}
+
+.home .controls .vid-btn.active{
+  background:var(--black);
+}
+
+.packages .box-container .box .content p{
+  font-size:1.7rem;
+}
+
+.packages .box-container .box .content h3{
+  font-size:2rem;
+
+}
+
+.packages .box-container .box img{
+  height: 30rem;
+  width:100%;
+  object-fit: cover;
+}
+
+.packages .box-container .box .content{
+  padding:2rem;
+}
+
+
+.packages .box-container .box .content .stars i{
+  font-size:1.7rem;
+  color:var(--gold);
+}
+
+.packages .box-container .box .content .price{
+  font-size: 2rem;
+  padding-top: 1rem;
+}
+
+.packages .box-container .box .content .price span{
+  font-size: 1.5rem;
+  text-decoration: line-through;
+}
+
+
+.book .row{  
+  gap:1.5rem;
+  align-items: center;
+}
+
+
+.book .row form{
+  flex:1 1 40rem;
+  padding:2rem;
+ 
+  border-radius: .5rem;
+}
+
+.book .row form .inputBox{
+  padding:.5rem 0;
+}
+
+.book .row form .inputBox input{
+  width:100%;
+  padding:1rem;
+  border:.1rem solid rgba(0,0,0,.1);
+  font-size: 1.7rem;
+  text-transform: none;
+}
+
+.book .row form .inputBox h3{
+  font-size: 2rem;
+  padding:1rem 0;
+  color:#fff;
+}
+
+.gallery .box-container{
+  display: flex;
+  flex-wrap: wrap;
+  gap:1.5rem;
+}
+
+.gallery .box-container .box{
+  overflow: hidden;
+  box-shadow: 0 1rem 2rem rgba(0,0,0,.1);
+  border:1rem solid #fff;
+  border-radius: .5rem;
+  flex:1 1 30rem;
+  height: 25rem;
+  position: relative;
+}
+
+.gallery .box-container .box img{
+  height: 100%;
+  width:100%;
+  object-fit: cover;
+}
+
+
+
+.contact .row form{
+  flex:1 1 50rem;
+  padding:2rem;
+  box-shadow: 0 1rem 2rem rgba(0,0,0,.1);
+  border-radius: .5rem;
+}
+
+.contact .row form .inputBox{
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+}
+
+.contact .row form .inputBox input, .contact .row form textarea{
+  width:49%;
+  margin:1rem 0;
+  padding:1rem;
+  font-size: 1.7rem;
+  color:#333;
+  background:#f7f7f7;
+  text-transform: none;
+}
+
+.contact .row form textarea{
+  height: 15rem;
+  resize: none;
+  width:100%;
+}
+
+
+.footer {
+  background-color: #000000;
+  color: #fff;
+  padding: 20px;
+  margin-top: 0px;
+  text-align: center;
+  font-size: 16px;
+}
+
+.footer .row {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  margin-bottom: 20px;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.footer .col-1,
+.footer .col-2,
+.footer .col-3,
+.footer .col-4 {
+  width: 23%;
+  margin-right: 1%;
+  text-align: center;
+}
+
+.footer .col-1:last-child,
+.footer .col-2:last-child,
+.footer .col-3:last-child,
+.footer .col-4:last-child {
+  margin-right: 8px;
+}
+
+.footer h3 {
+  font-size: 18px;
+  margin-bottom: 10px;
+}
+
+.footer a {
+  color: #fff;
+  display: block;
+  margin-bottom: 5px;
+}
+
+.footer p {
+  font-size: 14px;
+  line-height: 1.5;
+  margin-bottom: 10px;
+}
+
+.footer .caption p{
+  
+  line-height: 1.5;
+  margin-top: 20px;
+  text-align: center;
+}
+
+
+
+.login-form {
+  width: 300px;
+  margin: 0 auto;
+  padding: 20px;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+}
+
+form {
+  display: flex;
+  flex-direction: column;
+}
+
+label, input {
+  margin: 10px 0;
+}
+
+input[type="text"], input[type="password"] {
+  padding: 5px;
+  border-radius: 3px;
+  border: 1px solid #ccc;
+}
+
+input[type="submit"] {
+  background-color: #4CAF50;
+  color: white;
+  border: none;
+  padding: 10px;
+  border-radius: 5px;
+  cursor: pointer;
+}
+
+.form-footer {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-top: 20px;
+}
+
+.remember-me {
+  display: flex;
+  align-items: center;
+}
+
+.signup {
+  display: flex;
+  align-items: center;
+}
+
+.signup a {
+  margin-left: 5px;
+  color: blue;
+  text-decoration: none;
+}
+
+
+
+
